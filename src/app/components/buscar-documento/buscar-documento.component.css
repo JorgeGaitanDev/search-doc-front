@@ -1,0 +1,46 @@
+#emailHelp {
+  color: #b9bcc0; /* Cambia este valor al color que prefieras */
+}
+
+.form-label {
+  color: #2c2b92; /* Cambia el color del texto de las etiquetas a azul */
+  /* font-weight: bold; */
+  font-weight: 50;
+}
+
+#searchButton {
+  width: auto;
+  padding: 10px 20px;
+  border-radius: 20px;
+  /* background-color: #003366; */
+}
+
+.btn-primary {
+  background-color: #131475; /* Cambia el color de fondo a tu preferencia */
+  border-color: #131475;
+  font-weight: bold;
+  color: #d4d3d3;
+  /* color: rgba(255, 255, 255, 0.068); /* Cambia el color del texto para que contraste adecuadamente */
+}
+
+button.btn-primary:disabled {
+  background-color: #daedf0; /* Cambia al color de fondo deseado */
+  border-color: #cccccc; /* Asegúrate de que el borde también tenga el mismo color */
+  color: #666666; /* Opcional: cambia el color del texto si es necesario */
+}
+
+.form-control::placeholder {
+  color: #9fa1a5; /* Cambia el color del símbolo "#" a rojo */
+}
+
+* {
+  font-family: 'Roboto', sans-serif; /* Aplica el tipo de letra Roboto-Regular a todos los elementos de texto */
+}
+
+.no-outline:focus {
+  outline: none; /* Elimina el resaltado azul claro al hacer clic en el cuadro de texto */
+}
+
+.form-text {
+  font-size: 14px; /* Cambia este valor al tamaño deseado */
+}

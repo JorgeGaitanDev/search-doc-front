@@ -1,0 +1,37 @@
+<div class="container mt-5">
+  <div class="row">
+      <div class="col-lg-3 offset-lg-4">
+          <div class="card">
+              <div class="card-body">
+                  <div id="emailHelp" class="form-text mb-3">Todos los campos son obligatorios</div>
+                  <form [formGroup]="documentoForm" (ngSubmit)="agregarDocumento()">
+                      <div class="mb-4">
+                          <label for="documentType" class="form-label bold-text">Tipo de documento</label>
+                          <select type="text" formControlName="tipo_documento"
+                              class="form-select form-select-lg" required>
+                              <option value="" selected disabled>Tipo de documento</option>
+                              <option value="CC">Cédula de ciudadanía</option>
+                              <option value="PA">Pasaporte</option>
+                          </select>
+                          <div class="text-danger" *ngIf="documentoForm.get('tipo_documento')?.hasError('required') && documentoForm.get('tipo_documento')?.touched">
+                            <span>El documento <strong>es obligatorio</strong></span>
+                          </div>
+                      </div>
+                      <div class="mb-4">
+                          <label for="documentNumber" class="form-label bold-text">Número de documento</label>
+                          <input type="text" formControlName="num_documento"
+                              class="form-control form-control-lg no-outline" minlength="8" maxlength="11" required pattern="\d*" placeholder="#">
+                          <div class="text-danger"
+                          *ngIf="documentoForm.get('num_documento')?.hasError('required') && documentoForm.get('num_documento')?.touched">
+                              <span>El documento <strong>es obligatorio</strong></span>
+                          </div>
+                      </div>
+                      <div class="text-center mb-1">
+                        <button type="submit"  id="searchButton" [disabled]="documentoForm.invalid" class="btn btn-primary w-75">Buscar</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

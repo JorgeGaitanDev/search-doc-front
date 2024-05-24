@@ -1,0 +1,46 @@
+GET: Obtener datos.
+POST: Crear datos.
+PUT: Actualizar datos.
+DELETE: Eliminar datos.
+
+400 - Solicitud incorrecta: Error en la solicitud del cliente.
+404 - No encontrado: El recurso solicitado no existe.
+500 - Error interno del servidor: Problema en el servidor al procesar la solicitud.
+200 - OK: La solicitud se procesó correctamente.
+
+CODIGOS
+400, 404, 500 y 200
+200
+Método: post
+http://localhost:4000/api/informes
+{
+    "fecha_aplicaci_n": "2024-05-17T00:00:00.000",
+    "a_o": "2022",
+    "cod_territorio": "11",
+    "nom_territorio": "Bogotá",
+    "cantidad_dosis_aplicadas": "100",
+    "fecha_corte": "2024-05-24T00:00:00.000"
+}
+
+400
+Método: post
+http://localhost:4000/api/informes
+{
+    "fecha_aplicaci_n": "2024-05-17T00:00:00.000",
+    "cod_territorio": "11",
+    "nom_territorio": "Bogotá",
+    "cantidad_dosis_aplicadas": "100"
+    // Falta "a_o" y "fecha_corte"
+}
+
+404
+Método: get
+URL: http://localhost:4000/api/informes/12345678901234567890123
+Usar un ID que no exista en la base de datos
+
+
+500
+Método: POST, GET, PUT, DELETE (cualquier método)
+URL: Cualquier endpoint de tu API "http://localhost:4000/api/error"
+O apagando el servidor de la base de datos
+

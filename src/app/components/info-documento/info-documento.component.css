@@ -1,0 +1,40 @@
+.input-transparent {
+  background-color: transparent;
+  border: none;
+  pointer-events: none; /* Deshabilita la interacción del usuario */
+  box-shadow: none; /* Remueve cualquier sombra del input */
+  font-weight: bold; /* Opcional: Puedes hacer que el texto sea más visible */
+  color: #25252567;
+}
+
+.input-transparent:focus {
+  outline: none; /* Remueve el borde azul cuando el input es enfocado */
+}
+
+label[for="primerApellido"],
+label[for="primerNombre"] {
+  color: #25252567; /* Puedes cambiar 'green' por el color que prefieras */
+}
+
+/* Poner en negrilla y cambiar el color del texto en la cabecera de la tarjeta */
+.card-header {
+  font-weight: bold; /* Poner en negrilla */
+  color: #000000; /* Cambiar 'purple' por el color que prefieras */
+}
+
+.card-header {
+  font-weight: bold; /* Poner en negrilla */
+  font-size: 20px; /* Cambiar el tamaño del texto, puedes ajustar este valor */
+}
+
+.custom-card {
+  border: 2px solid blue; /* Borde azul alrededor de la tarjeta */
+}
+
+.no-border {
+  border-bottom: none; /* Elimina el borde inferior del encabezado */
+}
+
+* {
+  font-family: 'Roboto', sans-serif; /* Aplica el tipo de letra Roboto-Regular a todos los elementos de texto */
+}
