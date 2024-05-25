@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { DocumentoService } from 'src/app/services/documento.service';
 import { HttpClient } from '@angular/common/http';
+import { UsuarioService } from 'src/app/services/usuario_service';
 
 
 @Component({
@@ -34,6 +35,7 @@ export class BuscarDocumentoComponent implements OnInit {
 
   documentoForm: FormGroup;
   constructor(private fb: FormBuilder,
+              private usuarioService: UsuarioService,
               private router: Router,
               private toastr: ToastrService,
               private _documentoService: DocumentoService,
@@ -58,7 +60,7 @@ export class BuscarDocumentoComponent implements OnInit {
 
       // Hacer la petición GET a la URL construida
       this.http.get<any>(url).subscribe((response: any) => {
-        this.usuario = response;
+        this.usuarioService.changeUsuario(response);
         this.router.navigate(['/info-documento']);
       }, (error: any) => {
         console.error(error);
