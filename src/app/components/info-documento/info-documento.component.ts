@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuarioService } from 'src/app/services/usuario_service';
 
 @Component({
   selector: 'app-info-documento',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./info-documento.component.css']
 })
 export class InfoDocumentoComponent implements OnInit {
+  usuario: any;
 
-  constructor() { }
+  constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit(): void {
+    this.usuarioService.currentUsuario.subscribe(usuario => this.usuario = usuario);
   }
 
 }
