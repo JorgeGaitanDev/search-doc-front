@@ -10,8 +10,8 @@
                           <select type="text" formControlName="tipo_documento"
                               class="form-select form-select-lg" required>
                               <option value="" selected disabled>Tipo de documento</option>
-                              <option value="CC">Cédula de ciudadanía</option>
-                              <option value="PA">Pasaporte</option>
+                              <option value="C">Cédula de ciudadanía</option>
+                              <option value="P">Pasaporte</option>
                           </select>
                           <div class="text-danger" *ngIf="documentoForm.get('tipo_documento')?.hasError('required') && documentoForm.get('tipo_documento')?.touched">
                             <span>El documento <strong>es obligatorio</strong></span>
